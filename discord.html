@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Ducktape </title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="shortcut icon" href="./branding/Logoinv-01.png">
+        <style>
+            #joinButton {
+                width: 100px;
+                height: 50px;
+                border: none;
+                border-color: #FFFFFF;
+                border-width: 1px;
+                position: absolute;
+                left: 50%;
+                top: 75%;
+                transform: translate(-50%, -50%);
+                transition-duration: 0.2s;
+            }
 
-<head>
-    <title>Ducktape - Discord</title>
-    <meta name="title" content="Ducktape - Discord">
-    <meta name="description" content="The Ducktape Discord server!">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ducktapeengine.github.io/discord">
-    <meta property="og:title" content="Ducktape - Discord">
-    <meta property="og:description" content="Ducktape - Discord server!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/DucktapeEngine/ducktapeengine.github.io/main/logoHead.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ducktapeengine.github.io/discord">
-    <meta property="twitter:title" content="Ducktape - Discord">
-    <meta property="twitter:description" content="Ducktape Discord server!">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/DucktapeEngine/ducktapeengine.github.io/main/logoHead.png">
-</head>
-<body>
-    <script>
-        location.href = 'https://discord.gg/AM8rQQgqMJ';
-    </script>
-</body>
+            #joinButton:hover {
+                background-color: #000000;
+                color: #FFFFFF;
+                border-style: solid;
+                border-color: #FFFFFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./menu.html">MENU</a></li>
+                <li><a href="./getstarted.html">GET STARTED</a></li>
+            </ul>
+        </div>
+        <a href="https://discord.gg/AM8rQQgqMJ" target="_blank"><button id="joinButton">Join</button></a>
+    </body>
 </html>

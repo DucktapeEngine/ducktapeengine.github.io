@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat/Montserrat-Regular.ttf);
+}
+
+*, *:focus {
+  	box-sizing: border-box;
+  	font-family: Montserrat;
+  	letter-spacing: 2px;
+  	cursor: crosshair;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+	transition-duration: 0.2s;
+}
+
+a:hover {
+	font-weight:bold;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+}
+
+.navbar {
+	display: inline-block;
+	float: right;
+	margin: 0px;
+	padding: 20px;
+	padding-right: 30px;
+}
+
+.navbar li {
+	float: left;
+	display: block;
+	padding: 8px;
+}
