@@ -1,30 +1,21 @@
 @font-face {
-    font-family: Montserrat;
-    src: url(./Montserrat/Montserrat-Regular.ttf);
+    font-family: ComfortaaBold;
+    src: url(Comfortaa/static/Comfortaa-Bold.ttf);
 }
 
-*, *:focus {
-  	box-sizing: border-box;
-  	font-family: Montserrat;
-  	letter-spacing: 2px;
-  	cursor: crosshair;
+* {
+    font-family: ComfortaaBold;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
 }
 
-a {
-	text-decoration: none;
-	color: #FFFFFF;
-	transition-duration: 0.2s;
+html {
+  scroll-behavior: smooth;
 }
 
-a:hover {
-	font-weight:bold;
-}
-
-html, body {
-	margin: 0;
-	height: 100%;
-	background-color: #000000;
-	color: #FFFFFF;
+body {
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -32,23 +23,116 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFFFFF;
+  background: #888;
 }
 
-.navbar {
-	display: inline-block;
-	float: right;
-	margin: 0px;
-	padding: 20px;
-	padding-right: 30px;
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
-.navbar li {
-	float: left;
-	display: block;
-	padding: 8px;
+a {
+    text-decoration: none !important;
+}
+
+#navbar {
+    position: static;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-right: 60px;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+#navbar li {
+    display: inline;
+    padding-right: 30px;
+    float: right;
+}
+
+#navbar a, svg {
+    display: block;
+    color: #705B30;
+    transition-duration: 0.2s;
+}
+
+#navbar a:hover, svg:hover {
+    color: #000000;
+}
+
+#scrollToTopButton {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    bottom: -60px;
+    right: 30px;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px;
+    font-size: 18px;
+    transition-duration: 0.5s;
+}
+
+#scrollToTopButton:hover {
+    background-color: lightgrey;
+}
+
+#scrollToTopButton svg {
+    color: black;
+    width: 30px;
+    height: 30px;
+    transform: translate(0px, 0px);
+}
+
+#searchbar {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#searchbar #closeButton {
+    position: absolute;
+    right: 80px;
+    top: 60px;
+}
+
+#searchInput {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    width: 60%;
+    height: 5%;
+}
+
+#searchButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 5%;
+    background-color: #1F1D36;
+    color: #FFFFFF;
 }

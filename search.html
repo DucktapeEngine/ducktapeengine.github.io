@@ -3,54 +3,24 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ducktape</title>
+	<title>Search - Ducktape</title>
 	<link rel="stylesheet" href="index.css">
 	<style type="text/css">
-		#firstSection {
-			position: absolute;
-		    background-image: linear-gradient(to right, #F9C822, #F09D1D);
-		    top: 0px;
-		    left: 0px;
-			height: 100vh;
-			width: 100vw;
-			margin: 0px;
-		}
-
-		#secondSection {
-			position: absolute;
-			top: 100%;
-			width: 100vw;
-			height: 100vh;
-		    background-color: #1F1D36;
-		    color:  #FFFFFF;
-		}
-
 		#heading {
-			font-size: 70px;
 			position: absolute;
-			top: 250px;
-			left: 100px;
+			top: 150px;
+			left: 80px;
 		}
 
-		#tagline {
-			font-size: 30px;
+		#resultsUL {
 			position: absolute;
-			top: 340px;
-			left: 100px;
+			top: 200px;
+			left: 80px;
+			list-style-type: none;
 		}
 
-		#readmore {
-			font-size: 20px;
-			position: absolute;
-			top: 375px;
-			left: 100px;
-			color: #705B30;
-			transition-duration: 0.5s;
-		}
-
-		#readmore:hover {
-		    color: #000000;
-		    top: 390px;
+		#resultsUL li {
+			padding: 10px;
 		}
 	</style>
 </head>
@@ -59,8 +29,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
 		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
 	</svg>
-</button>	<div id="firstSection">
-<ul id="navbar">
+</button><ul id="navbar">
     <li>
         <a onclick="OpenSearchBar()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -118,17 +87,32 @@
     function Search() {
         document.location.href = "search.html?q=" + document.getElementById("searchInput").value;
     }
-</script>		<h1 id="heading">Ducktape</h1>
-		<h1 id="tagline">Convenience, that's Ducktape.</h3>
-		<a href="#secondSection" id="readmore"> Read more
-			<!-- The icons are from bootstrap btw https://icons.getbootstrap.com/ -->
-			<svg style="display: inline;"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-				<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-			</svg>
-		 </a>
-	</div>
-	<div id="secondSection">
-	</div>
+</script>
+	<h1 id="heading"></h1>
+	<ul id="resultsUL">
+		<li><a href="index.html">Home</a></li>
+	</ul>
+
+	<script type="text/javascript">
+		var searchQuery = document.location.href.split('?')[1].substring(2, document.location.href.split('?')[1].length);
+		document.getElementById("heading").innerHTML = "Search results for: \"" + searchQuery + "\"";
+
+		var input, filter, ul, li, a, i, txtValue;
+		input = searchQuery;
+		filter = input.toUpperCase();
+		ul = document.getElementById("resultsUL");
+		li = ul.getElementsByTagName('li');
+
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				  li[i].style.display = "";
+			} else {
+			  li[i].style.display = "none";
+			}
+		}
+	</script>
 </body>
 </html>
 
