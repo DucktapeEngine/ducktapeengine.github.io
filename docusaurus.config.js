@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/favicon-1.ico',
   organizationName: 'DucktapeEngine', // Usually your GitHub org/user name.
   projectName: 'Ducktape', // Usually your repo name.
 
@@ -46,7 +46,7 @@ const config = {
         title: 'Ducktape',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: '/img/icon-transparent.svg',
         },
         items: [
           {
@@ -98,7 +98,7 @@ const config = {
             ],
           },
         ],
-	copyright: `Copyright &copy; {new Date().getFullYear()} Ducktape. Built with Docusaurus.`
+	copyright: 'Copyright &copy; ' + new Date().getFullYear() + ' Ducktape. Built with Docusaurus.'
       },
       prism: {
         theme: lightCodeTheme,
