@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkducktape_website=self.webpackChunkducktape_website||[]).push([[969],{7749:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/ducktape","name":"ducktape","count":1,"permalink":"/blog/tags/ducktape"}')}}]);
