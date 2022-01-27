@@ -24,6 +24,7 @@ function HomepageHeader() {
 
 export default function Home() {
 	const { siteConfig } = useDocusaurusContext();
+	
 	return (
 		<Layout
 			title={`Home`}
@@ -40,7 +41,7 @@ export default function Home() {
 				</div>
 
 				<div className={styles.card}>
-					<img align="right" src='img/focus-on-difference.svg' width="400px"/>
+					<img align="right" src='img/focus-on-difference.png' width="400px"/>
 					<div className={styles.cardTextRight}>
 						<h1>Focus on What Matters</h1>
 						<p>Ducktape comes with an integrated rendering, audio, physics, UI (coming soon) system integrated, so you can focus on what makes <i>your</i> game different.</p>
