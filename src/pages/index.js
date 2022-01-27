@@ -47,7 +47,16 @@ export default function Home() {
 						<p>Ducktape comes with an integrated rendering, audio, physics, UI (coming soon) system integrated, so you can focus on what makes <i>your</i> game different.</p>
 					</div>
 				</div>
+
+				<div className={styles.card}>
+					<img align="left" src='img/portable-to-language.svg' width="400px"/>
+					<div className={styles.cardTextLeft}>
+						<h1>Available in different languages</h1>
+						<p>Ducktape is written in C++, allowing it to be ported to many languages including python, java, C#, rust. (Coming soon)</p>
+					</div>
+				</div>
 			</main>
+			<img id={styles.curveBottom} src="./img/curveBottom.svg" />
 		</Layout>
 	);
 }

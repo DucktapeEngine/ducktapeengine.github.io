@@ -41,7 +41,7 @@ const config = {
 			navbar: {
 				title: 'Ducktape',
 				logo: {
-					alt: 'My Site Logo',
+					alt: 'Ducktape Logo',
 					src: 'img/logo.png',
 				},
 				items: [
@@ -70,7 +70,6 @@ const config = {
 				
 			},
 			footer: {
-				style: 'dark',
 				links: [
 					{
 						title: 'Docs',
@@ -125,16 +124,7 @@ const config = {
 				respectPrefersColorScheme: false,
 			},
 
-			image: 'img/ducktape.png',
-
-			announcementBar: {
-				id: 'support_us',
-				content:
-				  'Like what you see? Help us by <a target="_blank" rel="noreferrer noopener" href="https://github.com/ducktapeengine/ducktape">starring the repository!</a>',
-				backgroundColor: '#18191A',
-				textColor: '#FED900',
-				isCloseable: true,
-			  },
+			image: 'img/ducktape.png'
 		}),
 };
 

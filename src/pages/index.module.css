@@ -9,6 +9,18 @@
   --ifm-font-family-base: 'Comfortaa';
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18191A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FED900;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,6 +85,10 @@ h1, p  {
   min-width: 100vw;
 }
 
+#curveBottom {
+  margin-bottom: -10px;
+}
+
 .card {
   margin: 100px;
 }
@@ -87,4 +103,13 @@ h1, p  {
     padding-top: 150px;
     padding-right: 500px;
   }
+}
+
+html[data-theme='dark'] footer {
+  background-color: #FED900;
+  color: black !important;
+}
+
+footer a {
+  color: black !important;
 }
