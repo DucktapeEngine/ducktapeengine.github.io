@@ -12,7 +12,7 @@ const config = {
 	baseUrl: '/',
 	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.ico',
+	favicon: 'img/logo.png',
 	organizationName: 'DucktapeEngine', // Usually your GitHub org/user name.
 	projectName: 'DucktapeEngine.github.io', // Usually your repo name.
 	deploymentBranch: 'main',
@@ -42,16 +42,25 @@ const config = {
 				title: 'Ducktape',
 				logo: {
 					alt: 'My Site Logo',
-					src: 'img/logo.svg',
+					src: 'img/logo.png',
 				},
 				items: [
 					{
 						type: 'doc',
 						docId: 'intro',
 						position: 'left',
-						label: 'Manual',
+						label: 'Docs',
 					},
-					{ to: '/blog', label: 'Blog', position: 'left' },
+					{
+						to: '/scriptingreference',
+						label: 'API',
+						position: 'left',
+					},
+					{ 
+						to: '/blog', 
+						label: 'Blog', 
+						position: 'left' 
+					},
 					{
 						href: 'https://github.com/ducktapeengine/ducktape',
 						label: 'GitHub',
@@ -122,7 +131,7 @@ const config = {
 				id: 'support_us',
 				content:
 				  'Like what you see? Help us by <a target="_blank" rel="noreferrer noopener" href="https://github.com/ducktapeengine/ducktape">starring the repository!</a>',
-				backgroundColor: '#343434',
+				backgroundColor: '#18191A',
 				textColor: '#FED900',
 				isCloseable: true,
 			  },
