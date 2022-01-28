@@ -14,11 +14,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #18191A;
+  background: #EEEEEE;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FED900;
+  background: #FF6C52;
 }
 
 html {
@@ -69,8 +69,10 @@ h1, p  {
   margin: 10px;
 }
 
-#getStarted:hover {
-  background-color: #FF6C52;
+@media (hover: hover) {
+  #getStarted:hover {
+    background-color: #FF6C52;
+  }
 }
 
 #curve {
