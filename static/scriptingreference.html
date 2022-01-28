@@ -1,4 +1,7 @@
 <script>
-let domain = window.location.hostname;
-window.location.replace(hostname + "/scriptingreference.html");
+let arr = window.location.href.split("/");
+arr = arr.slice(0, -1);
+arr = arr.join("/");
+arr = arr + "/scriptingreference/index.html";
+window.location.replace(arr);
 </script>
