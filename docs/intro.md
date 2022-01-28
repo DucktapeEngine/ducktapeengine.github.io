@@ -1,35 +1,13 @@
----
-sidebar_position: 1
----
+# Hello Ducktape
 
-# Tutorial Intro
+Welcome to Ducktape, thanks for trying out this library!
 
-Let's discover **Docusaurus in less than 5 minutes**.
+We hope to have the engine well documented for your ease-of-use, thus making the process of using the library a smooth experience. If you ever come across any doubts/problems, feel free to ask them in our [Community Discord Server](https://dsc.gg/ducktape).
 
-## Getting Started
+:::info
+It is very highly recommended that you have basic knowledge of C++ linking and including.
+:::
 
-Get started by **creating a new site**.
+### Index
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+1. [Setup](setup)
