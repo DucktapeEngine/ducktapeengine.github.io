@@ -52,7 +52,7 @@ const config = {
 						label: 'Docs',
 					},
 					{
-						to: '/scriptingreference',
+						to: '/scriptingreference/',
 						label: 'API',
 						position: 'left',
 					},
