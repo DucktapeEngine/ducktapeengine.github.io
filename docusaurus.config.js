@@ -52,7 +52,7 @@ const config = {
 						label: 'Docs',
 					},
 					{
-						to: '/scriptingreference/index.html',
+						to: 'pathname:///scriptingreference/',
 						label: 'API',
 						position: 'left',
 					},
@@ -80,7 +80,7 @@ const config = {
 							},
 							{
 								label: 'Scripting Reference',
-								to: '/ScriptingReference',
+								to: 'pathname:///scriptingreference/index',
 							}
 						],
 					},
