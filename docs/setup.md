@@ -13,19 +13,29 @@ Compiling Ducktape requires you to have: Git, a C++ compiler, CMake, a build sys
 
 Run the following commands to compile Ducktape:
 
-Windows:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
 ```bash
 git clone https://github.com/ducktapeengine/ducktape.git
 cd ducktape
 .\build.bat
 ```
 
-Linux:
+</TabItem>
+<TabItem value="linux" label="Linux">
+
 ```bash
 git clone https://github.com/ducktapeengine/ducktape.git
 cd ducktape
 ./build.sh
 ```
+
+</TabItem>
+</Tabs>
 
 The build script will prompt you for the build tool to use, the build type (Release/Debug), and the path to your C++ compiler.
 After the entering the above information, Ducktape will start compiling. The built binaries will be available in the `build` folder.
