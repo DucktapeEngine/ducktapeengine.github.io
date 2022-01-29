@@ -44,7 +44,6 @@ Now it's time to clean up stuff that you don't need. Feel free to delete all fol
 - build
 - include
 - dependencies
-- LICENSE
 
 :::tip
 These are the same files you get when you download the prebuilt binaries.
@@ -99,3 +98,5 @@ Get Started: https://ducktapeengine.github.io/docs/intro
 Congratulations! You've successfully set up Ducktape.
 
 If you encountered any issues, please feel free to ask us on our [Community Discord Server](https://dsc.gg/ducktape).
+
+Also: Feel free to delete the `Ducktape` folder now, it won't be needed anymore.

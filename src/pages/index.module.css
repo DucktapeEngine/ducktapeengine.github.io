@@ -31,8 +31,12 @@ html {
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* height: 600px; */
   flex-direction: column;
+}
+
+.container {
+  position: absolute;
+  top: 25vh;
 }
 
 @media screen and (max-width: 966px) {
@@ -95,6 +99,12 @@ h1, p  {
   margin: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  .card {
+    margin: 30px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .cardTextLeft {
     padding-top: 150px;
@@ -120,4 +130,8 @@ footer a {
 
 code {
   font-family: 'Roboto Mono', monospace !important;
+}
+
+.button {
+  white-space: nowrap;
 }
