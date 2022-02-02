@@ -1,15 +1,8 @@
 # Setup
 
-There are two ways to setup Ducktape, one is to use the prebuilt binaries, the other is to build the source code from scratch and use those binaries.
-
-If you want to use the prebuilt binaries, you can download the latest prebuilt binaries from [here](https://github.com/DucktapeEngine/Ducktape/releases/latest).
+In order to use Ducktape, you must have the following tools installed: Git, a C++ compiler, CMake, Make.
 
 ### Compiling Ducktape
-:::info
-If you're using the prebuilt binaries, you may skip this step. Feel free to move ahead to [Setting up the project](#setting-up-the-project).
-:::
-
-Compiling Ducktape requires you to have: Git, a C++ compiler, CMake, a build system like make.
 
 Run the following commands to compile Ducktape:
 
@@ -20,42 +13,53 @@ import TabItem from '@theme/TabItem';
 <TabItem value="windows" label="Windows">
 
 ```bash
-git clone https://github.com/ducktapeengine/ducktape.git
-cd ducktape
-.\build.bat
+git clone https://github.com/DucktapeEngine/Ducktape.git & cd ducktape & .\build.bat
 ```
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
 ```bash
-git clone https://github.com/ducktapeengine/ducktape.git
-cd ducktape
-./build.sh
+git clone https://github.com/DucktapeEngine/Ducktape.git & cd ducktape & ./build.sh
 ```
 
 </TabItem>
 </Tabs>
 
-The build script will prompt you for the build tool to use, the build type (Release/Debug), and the path to your C++ compiler.
+The build script will prompt you for the build tool to use, and the path to your C++ compiler.
 After the entering the above information, Ducktape will start compiling. The built binaries will be available in the `build` folder.
-
-Now it's time to clean up stuff that you don't need. Feel free to delete all folders and files except the following ones:
-- build
-- include
-- dependencies
-
-:::tip
-These are the same files you get when you download the prebuilt binaries.
-:::
 
 ### Setting up the project
 
-Let's call the root directory of the project `root`. 
-First, create a `root/lib` folder and copy `Ducktape/build/libducktape.a` to it. Then, create a `root/include` folder and copy all of the contents from the Ducktape's `include` folder to it.
-And, make a `main.cpp` file in `root` and copy the following boilerplate code to it:
+Ducktape requires you to use [CMake](https://cmake.org/), we hope to have support for other build systems in the future, but for now, we'll have to stick with CMake.
+
+I'm honestly not sure how to word this documentation, so I'll just be straight forward and provide the steps as bullet points.
+So first of all, lets call the root directory of your project "root" just for the sake of this tutorial. Then follow the steps given below:
+- Copy the entire `Ducktape` folder into the `root` directory.
+- Create a `CMakeLists.txt` file in the `root` directory.
+- In the `CMakeLists.txt` file, add the following lines:
+```cmake
+cmake_minimum_required (VERSION 3.12)
+
+project(myproject LANGUAGES CXX)
+set(executable_name "myproject")
+
+add_executable(myproject main.cpp)
+
+set(DTROOT "${PROJECT_SOURCE_DIR}/Ducktape")
+set(PROJECT myproject)
+include(${DTROOT}/cmake/ducktape.cmake)
+```
+
+:::info For your information:
+In this CMake script, we're setting the `DTROOT` variable to the Ducktape directory, and the `PROJECT` variable to the cmake project. After this, you may include the `ducktape.cmake` file in your CMake script — which is an easy to way to include + link all of the required Ducktape files.
+:::
+
+- Create a `main.cpp` file in the `root` directory.
+- In the `main.cpp` file, add the following lines:
 ```cpp
-#include <Ducktape/ducktape.h>
+#include <Ducktape/Ducktape.h>
+using namespace DT;
 
 int main()
 {
@@ -64,32 +68,13 @@ int main()
 }
 ```
 
-How you actually link to these binaries differs with the build system you use. So it'll be up to you to figure out how to link the library. 
-But essentially, you need to:
-- Link to the `root/lib/libducktape.a` binary.
-- Add `root/include` to the include path.
+Time for compiling. Run the following commands to compile the project:
 
-:::caution
-It is crucial to add the `root/include` folder to the include path, otherwise the library won't be able to find the headers.
-:::
-
-Now for convenience, here's what a basic g++ build command will look like:
 ```bash
-g++ -std=c++14 -I./include -L./lib -lducktape -o main.exe main.cpp
+mkdir build & cd build & cmake .. & make
 ```
 
-Now the including and linking *should* be done.
-Try compiling the project now!
-
-**But wait!**
-
-You aren't done yet. You need to copy the contents of "Ducktape/dependencies" to the build folder (aka where the executable is set to be built). These binaries must stay in the same directory as the executable at all times for the executable to run.
-
-:::note
-Yes, we realize this is annoying, and we hope to fix it in a future release.
-:::
-
-*Now*, run the executable. It should print out the following:
+Now, run the executable using `ducktaptest`. It should print out the following:
 ```bash
 Ducktape is ready to go!
 Get Started: https://ducktapeengine.github.io/docs/intro
@@ -98,5 +83,3 @@ Get Started: https://ducktapeengine.github.io/docs/intro
 Congratulations! You've successfully set up Ducktape.
 
 If you encountered any issues, please feel free to ask us on our [Community Discord Server](https://dsc.gg/ducktape).
-
-Also: Feel free to delete the `Ducktape` folder now, it won't be needed anymore.
