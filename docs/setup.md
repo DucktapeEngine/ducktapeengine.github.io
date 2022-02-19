@@ -10,7 +10,8 @@ In order to use Ducktape, you must have the following tools installed: [Git](htt
 Let's get started! 🏃
 
 - Create an account if you don't have one already on [GitHub](https://github.com/signup)
-- Fork the [Ducktape template repository](https://github.com/DucktapeEngine/Template) on GitHub.
+- Use the [Ducktape template repository](https://github.com/DucktapeEngine/Template) to use as a starting point for your project.
+![](https://i.imgur.com/XvXlyOB.png)
 - Clone the repository into your local machine using the following command:
 ```bash
 git clone https://github.com/<your username>/<your repository name>.git
