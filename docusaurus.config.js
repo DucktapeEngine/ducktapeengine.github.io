@@ -22,12 +22,12 @@ const config = {
 			({
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					editUrl: 'https://github.com/ducktapeengine/ducktape/tree/main/packages/create-ducktape/templates/shared/',
+					editUrl: 'https://github.com/DucktapeEngine/ducktapeengine.github.io/tree/main/',
 				},
 				blog: {
 					showReadingTime: true,
 					editUrl:
-						'https://github.com/ducktapeengine/ducktape/tree/main/packages/create-ducktape/templates/shared/',
+						'https://github.com/DucktapeEngine/ducktapeengine.github.io/tree/main/',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -52,7 +52,7 @@ const config = {
 						label: 'Docs',
 					},
 					{
-						to: 'pathname:///scriptingreference/',
+						to: 'pathname:///API/',
 						label: 'API',
 						position: 'left',
 					},

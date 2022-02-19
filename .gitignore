@@ -6,6 +6,7 @@
 
 # Generated files
 .docusaurus
+.vscode
 .cache-loader
 
 # Misc
