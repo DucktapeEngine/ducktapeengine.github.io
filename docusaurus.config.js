@@ -80,7 +80,11 @@ const config = {
 							},
 							{
 								label: 'Scripting Reference',
-								to: 'pathname:///scriptingreference/index',
+								to: 'pathname:///API/index',
+							},
+							{
+								label: "Download",
+								to: 'https://github.com/DucktapeEngine/Ducktape/releases/latest'
 							}
 						],
 					},

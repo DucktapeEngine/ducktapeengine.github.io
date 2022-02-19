@@ -2,15 +2,19 @@
 
 Now that you've understood how to set up a Ducktape project, now it's time to dive into how the engine is structured and how you use it.
 
-A Ducktape project is just like a tree. A project contains multiple scenes, which in turn contain  entities, which in turn contain components.
+A Ducktape project is just like a tree. A project contains multiple scenes, which in turn contain entities, which in turn contain components.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scenes  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entitities  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓  
-&nbsp;&nbsp;&nbsp;&nbsp;Components  
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <span>Project</span>
+    <span>↓</span>
+    <span>Scenes</span>
+    <span>↓</span>
+    <span>Entitities</span>
+    <span>↓</span>
+    <span>Components</span>
+</div>
+
+<br/>
 
 You add Scenes through `SceneManager::LoadScene<>()`, Entities through `Entity::Instantiate()`, and Components through `Entity::AddComponent<>()`.
 

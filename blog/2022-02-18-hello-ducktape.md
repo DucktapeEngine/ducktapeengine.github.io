@@ -1,7 +1,7 @@
 ---
 title: Hello Ducktape
 description: Welcome to the first Ducktape blog post!
-slug: welcome-docusaurus-v2
+slug: hello-ducktape
 authors:
   - name: Ducktape
     title: Lead Developer | Founder | Maintainer
@@ -11,4 +11,4 @@ tags: []
 hide_table_of_contents: false
 ---
 
-Hello.
+Hello and welcome to the Ducktape documentation website!
