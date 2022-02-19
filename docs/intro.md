@@ -10,10 +10,10 @@ It is very highly recommended that you have basic knowledge of C++ linking and i
 
 ### Index
 
-1. [Setup](setup)
-2. [Structure](structure)
-3. [Rendering](rendering)
-4. [Audio](audio)
-5. [Input](input)
-6. [Physics](physics)
-7. [Scripting](scripting)
+1. [Setup](setup.md)
+2. [Structure](structure.md)
+3. [Rendering](rendering.md)
+4. [Audio](audio.md)
+5. [Input](input.md)
+6. [Physics](physics.md)
+7. [Scripting](scripting.md)
