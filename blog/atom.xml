@@ -9,11 +9,11 @@
     <icon>https://ducktapeengine.github.io/img/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Hello Ducktape]]></title>
-        <id>welcome-docusaurus-v2</id>
-        <link href="https://ducktapeengine.github.io/blog/welcome-docusaurus-v2"/>
+        <id>hello-ducktape</id>
+        <link href="https://ducktapeengine.github.io/blog/hello-ducktape"/>
         <updated>2022-02-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the first Ducktape blog post!]]></summary>
-        <content type="html"><![CDATA[<p>Hello.</p>]]></content>
+        <content type="html"><![CDATA[<p>Hello and welcome to the Ducktape documentation website!</p>]]></content>
         <author>
             <name>Ducktape</name>
             <uri>https://github.com/theduckdev</uri>

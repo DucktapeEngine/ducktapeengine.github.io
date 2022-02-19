@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkducktapengine_github_io=self.webpackChunkducktapengine_github_io||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello Ducktape","permalink":"/blog/hello-ducktape"}]}')}}]);
