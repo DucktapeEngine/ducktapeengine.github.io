@@ -20,38 +20,28 @@ git clone https://github.com/<your username>/<your repository name>.git
 ```bash
 cd <your repository name>
 ```
-- Compile Ducktape:
+
+- Run the following commands:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
 ```bash
-.\Ducktape\build.bat
+cd Ducktape
+build
+cd ..
+cd ..
+build
 ```
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
 ```bash
-./Ducktape/build.sh
-```
-
-</TabItem>
-</Tabs>
-
-- Build Ducktape sample program
-
-<Tabs>
-<TabItem value="windows" label="Windows">
-
-```bash
-.\build.bat
-```
-
-</TabItem>
-<TabItem value="linux" label="Linux">
-
-```bash
+cd Ducktape
+./build.sh
+cd ..
+cd ..
 ./build.sh
 ```
 
@@ -64,7 +54,7 @@ cd <your repository name>
 <TabItem value="windows" label="Windows">
 
 ```bash
-.\helloducktape
+helloducktape
 ```
 
 </TabItem>
