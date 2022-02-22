@@ -14,11 +14,11 @@ Let's get started! 🏃
 ![](https://i.imgur.com/XvXlyOB.png)
 - Clone the repository into your local machine using the following command:
 ```bash
-git clone https://github.com/<your username>/<your repository name>.git
+git clone https://github.com/DucktapeEngine/Template.git
 ```
 - Change into the directory you just cloned using:
 ```bash
-cd <your repository name>
+cd Template
 ```
 
 - Run the following commands:
